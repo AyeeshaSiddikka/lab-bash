@@ -1,0 +1,157 @@
+(base) ➜  lab-bash git:(master) ✗ echo "Hello World"
+Hello World
+(base) ➜  lab-bash git:(master) ✗ mkdir new_dir
+(base) ➜  lab-bash git:(master) ✗ ls
+exercices inputs    lorem     new_dir   outputs   readme.md
+(base) ➜  lab-bash git:(master) ✗ rm -R new_dir
+(base) ➜  lab-bash git:(master) ✗ ls
+exercices inputs    lorem     outputs   readme.md
+(base) ➜  lab-bash git:(master) ✗ cp lorem/sed.txt lorem-copy/
+cp: directory lorem-copy does not exist
+(base) ➜  lab-bash git:(master) ✗ mkdir lorem-copy
+(base) ➜  lab-bash git:(master) ✗ cp lorem/sed.txt lorem-copy/
+(base) ➜  lab-bash git:(master) ✗ ls lorem
+at.txt    at.txte   lorem.txt sed.txt
+(base) ➜  lab-bash git:(master) ✗ $ cp lorem/at.txt lorem-copy/ ; cp lorem/lorem.txt lorem-copy/
+zsh: command not found: $
+(base) ➜  lab-bash git:(master) ✗ cp lorem/at.txt lorem-copy/ ; cp lorem/lorem.txt lorem-copy/
+(base) ➜  lab-bash git:(master) ✗ ls
+exercices  inputs     lorem      lorem-copy outputs    readme.md
+(base) ➜  lab-bash git:(master) ✗ ls lorem-copy
+at.txt    lorem.txt sed.txt
+(base) ➜  lab-bash git:(master) ✗ cat lorem/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+(base) ➜  lab-bash git:(master) ✗ cat lorem/at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+(base) ➜  lab-bash git:(master) ✗ cat lorem/lorem.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+(base) ➜  lab-bash git:(master) ✗ head -3 lorem-copy/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+(base) ➜  lab-bash git:(master) ✗ tail -3 lorem-copy/sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+(base) ➜  lab-bash git:(master) ✗ echo "Homo homini lupus." >> lorem-copy/sed.txt
+(base) ➜  lab-bash git:(master) ✗ cat lorem-copy/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+(base) ➜  lab-bash git:(master) ✗ tail -3 lorem-copy/sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+(base) ➜  lab-bash git:(master) ✗ sed -r -i 's/et/ET/g' lorem/at.txt
+sed: 1: "lorem/at.txt": extra characters at the end of l command
+(base) ➜  lab-bash git:(master) ✗ cat lorem/at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+(base) ➜  lab-bash git:(master) ✗ whoami
+ayeesha
+(base) ➜  lab-bash git:(master) ✗ pwd
+/Users/ayeesha/IH-Labs/lab-bash
+(base) ➜  lab-bash git:(master) ✗ ls lorem/*.txt
+lorem/at.txt    lorem/lorem.txt lorem/sed.txt
+(base) ➜  lab-bash git:(master) ✗ cat lorem/sed.txt | wc -l
+       9
+(base) ➜  lab-bash git:(master) ✗ git add .
+(base) ➜  lab-bash git:(master) ✗ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    lorem-copy/.DS_Store
+	deleted:    lorem-copy/.gitkeep
+	new file:   lorem-copy/at.txt
+	deleted:    lorem-copy/dummy_file.txt
+	new file:   lorem-copy/lorem.txt
+	new file:   lorem-copy/sed.txt
+
+(base) ➜  lab-bash git:(master) ✗ git commit -m 'bash answers'
+[master 6157ab7] bash answers
+ 6 files changed, 24 insertions(+), 1 deletion(-)
+ delete mode 100644 lorem-copy/.DS_Store
+ delete mode 100755 lorem-copy/.gitkeep
+ create mode 100755 lorem-copy/at.txt
+ delete mode 100755 lorem-copy/dummy_file.txt
+ create mode 100755 lorem-copy/lorem.txt
+ create mode 100755 lorem-copy/sed.txt
+(base) ➜  lab-bash git:(master) git push
+remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
+fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
+(base) ➜  lab-bash git:(master) git push
+remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
+fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
+(base) ➜  lab-bash git:(master) git push
+remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
+fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
+(base) ➜  lab-bash git:(master) git commit -m 'bash answers'
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) ➜  lab-bash git:(master) git push
+remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
+fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
+(base) ➜  lab-bash git:(master) git push -u orgi
+fatal: 'orgi' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(base) ➜  lab-bash git:(master) git push -u origin <branch>
+zsh: parse error near `\n'
+(base) ➜  lab-bash git:(master) git push -u origin <lab-bash>
+zsh: parse error near `\n'
+(base) ➜  lab-bash git:(master) git push -u origin lab-bash
+error: src refspec lab-bash does not match any
+error: failed to push some refs to 'https://github.com/AyeeshaSiddikka/lab-bash.git'
+(base) ➜  lab-bash git:(master) git push
+remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
+fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
+(base) ➜  lab-bash git:(master) git push -u origin lab-bash
+error: src refspec lab-bash does not match any
+error: failed to push some refs to 'https://github.com/AyeeshaSiddikka/lab-bash.git'
+(base) ➜  lab-bash git:(master)
+(base) ➜  lab-bash git:(master) git push -u origin master
+remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
+fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
+(base) ➜  lab-bash git:(master)
