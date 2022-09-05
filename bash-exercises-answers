@@ -90,68 +90,25 @@ ayeesha
 lorem/at.txt    lorem/lorem.txt lorem/sed.txt
 (base) ➜  lab-bash git:(master) ✗ cat lorem/sed.txt | wc -l
        9
-(base) ➜  lab-bash git:(master) ✗ git add .
-(base) ➜  lab-bash git:(master) ✗ git status
-On branch master
-Your branch is up to date with 'origin/master'.
 
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	deleted:    lorem-copy/.DS_Store
-	deleted:    lorem-copy/.gitkeep
-	new file:   lorem-copy/at.txt
-	deleted:    lorem-copy/dummy_file.txt
-	new file:   lorem-copy/lorem.txt
-	new file:   lorem-copy/sed.txt
-
-(base) ➜  lab-bash git:(master) ✗ git commit -m 'bash answers'
-[master 6157ab7] bash answers
- 6 files changed, 24 insertions(+), 1 deletion(-)
- delete mode 100644 lorem-copy/.DS_Store
- delete mode 100755 lorem-copy/.gitkeep
- create mode 100755 lorem-copy/at.txt
- delete mode 100755 lorem-copy/dummy_file.txt
- create mode 100755 lorem-copy/lorem.txt
- create mode 100755 lorem-copy/sed.txt
-(base) ➜  lab-bash git:(master) git push
-remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
-fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
-(base) ➜  lab-bash git:(master) git push
-remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
-fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
-(base) ➜  lab-bash git:(master) git push
-remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
-fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
-(base) ➜  lab-bash git:(master) git commit -m 'bash answers'
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-(base) ➜  lab-bash git:(master) git push
-remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
-fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
-(base) ➜  lab-bash git:(master) git push -u orgi
-fatal: 'orgi' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-(base) ➜  lab-bash git:(master) git push -u origin <branch>
-zsh: parse error near `\n'
-(base) ➜  lab-bash git:(master) git push -u origin <lab-bash>
-zsh: parse error near `\n'
-(base) ➜  lab-bash git:(master) git push -u origin lab-bash
-error: src refspec lab-bash does not match any
-error: failed to push some refs to 'https://github.com/AyeeshaSiddikka/lab-bash.git'
-(base) ➜  lab-bash git:(master) git push
-remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
-fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
-(base) ➜  lab-bash git:(master) git push -u origin lab-bash
-error: src refspec lab-bash does not match any
-error: failed to push some refs to 'https://github.com/AyeeshaSiddikka/lab-bash.git'
-(base) ➜  lab-bash git:(master)
-(base) ➜  lab-bash git:(master) git push -u origin master
-remote: Permission to AyeeshaSiddikka/lab-bash.git denied to ayeesha-siddikka.
-fatal: unable to access 'https://github.com/AyeeshaSiddikka/lab-bash.git/': The requested URL returned error: 403
+(base) ➜  lab-bash git:(master) find . -type f -name "lorem*.*" | wc -l
+       2
+(base) ➜  lab-bash git:(master) read (enter)
+zsh: missing end of string
+(base) ➜  lab-bash git:(master) read
+ayeesha
+(base) ➜  lab-bash git:(master) name="${REPLY}"
+(base) ➜  lab-bash git:(master) echo $name
+ayeesha
+(base) ➜  lab-bash git:(master) read
+AYEESHA
+(base) ➜  lab-bash git:(master) name="${REPLY}"
+(base) ➜  lab-bash git:(master) echo $name
+AYEESHA
+(base) ➜  lab-bash git:(master) mkdir $name
+(base) ➜  lab-bash git:(master) ls
+AYEESHA    exercices  inputs     lorem      lorem-copy outputs    readme.md
+(base) ➜  lab-bash git:(master) rm -R $name
+(base) ➜  lab-bash git:(master) ls
+exercices  inputs     lorem      lorem-copy outputs    readme.md
 (base) ➜  lab-bash git:(master)
